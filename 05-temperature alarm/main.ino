@@ -23,10 +23,23 @@ void loop() {
   Serial.print(temp);
   Serial.println(" C "); 
   if (temp>= 30){
-  digitalWrite(buzzer, HIGH);   // turn the LED on (HIGH is the voltage level)
+
+  tone(buzzer, 261 ,500);
+
+  tone(buzzer, 392,100);
+
+    /*Tone needs 2 arguments, but can take three
+
+  tone(pin, frequency, duration)
+    1) Pin#
+    2) Frequency - this is in hertz (cycles per second) which determines the pitch of the noise made
+    3) Duration - how long teh tone plays
+  */
   }
   else{
 
-  digitalWrite(buzzer, LOW);    // turn the LED off by making the voltage LOW
-  } 
+  noTone(buzzer);
+
+
+  }
 }
