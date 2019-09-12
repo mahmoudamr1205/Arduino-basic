@@ -15,8 +15,14 @@ void setup() {
 void loop() {
  
  temp  = analogRead(temp_pin);
- temp = (temp/1024.0)*5.0;    //conversion to volts
+ temp = (temp/1024.0)*5.0;    //conversion to volts         o/p is mille volt 
  temp = temp *100.0 ;         //conversion to temp Celsius
+   
+   /*
+   why *100 ?
+   output >>> mv
+   10 mv each on dgree 
+   */
  
   
   Serial.print("temperature= "); 
