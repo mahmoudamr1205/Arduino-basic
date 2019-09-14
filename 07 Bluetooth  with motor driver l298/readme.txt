@@ -1,0 +1,1 @@
+1-Bluetooth sends F,B,R,L to an arduino so that if it send F or B a motor driven by a relay module move forward or backward.. if it sends R or L another motor is driven by a motor driver l298 moves in the two directions at half speed..
